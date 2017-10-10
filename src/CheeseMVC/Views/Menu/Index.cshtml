@@ -1,0 +1,12 @@
+﻿@model List<CheeseMVC.Models.Menu>
+<h2>@ViewBag.title</h2>
+
+
+@* Each menu in the list should link to a URL of the form /Menu/ViewMenu/menuID *@
+<ul>
+    @foreach (var menu in Model)
+    {
+        <li><a asp-controller="Menu" asp-action="ViewMenu" asp-route-id="@menu.ID">@menu.Name</a></li>
+    }
+</ul>
+<p><a asp-controller="Menu" asp-action="Add">Add Menu</a></p>

@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace CheeseMVC.Models
 {
-    // Part 1 - Setting Up the New Model
-    public class CheeseCategory
+    // Part 3: Setting Up a Many-to-Many Relationship
+    public class Menu
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public IList<Cheese> Cheeses { get; set; } // this list will represent the list of all items in a given category
+        public IList<CheeseMenu> CheeseMenus { get; set; }
     }
 }
